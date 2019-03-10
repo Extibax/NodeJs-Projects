@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 import Navigation from './Components/Navigation';
+import Todo_Form from './Components/Todo_Form';
 import { todos } from './todos.json';
 
 class App extends Component {
@@ -10,13 +11,30 @@ class App extends Component {
     super();
     this.state = {
       todos
+    };
+    this.handleAddTodo = this.handleAddTodo.bind(this);
+  }
+
+  handleAddTodo(todo) {
+    this.setState({
+        todos: [...this.state.todos, todo]
+    });
+  }
+
+  handleRemoveTodo(index) {
+    if (window.confirm('Are you sure you want delete it?')) {
+      this.setState({
+        todos: this.state.todos.filter((todo, i) => {
+          return i !== index;
+        })
+      });
     }
   }
 
   render() {
     const todos = this.state.todos.map((todo, i) => {
       return (
-        <div className="col-md-4">
+        <div className="col-md-4" key={i}>
             <div className="card mt-4">
             <div className="card-header">
               <h3>{ todo.title }</h3>
@@ -28,6 +46,13 @@ class App extends Component {
               <p>{ todo.description }</p>
               <p className="text-danger">{ todo.responsible }</p>
             </div>
+            <div className="card-footer">
+              <button 
+                className="btn btn-danger"
+                onClick={ this.handleRemoveTodo.bind(this, i) }>
+                Remove
+              </button>
+            </div>
           </div>
         </div>
       );
@@ -35,15 +60,32 @@ class App extends Component {
 
     return (
       <div className="App">
-          <Navigation title="TASKS" />
+          {/* Navigation */}
+          <Navigation title="TASKS" length={ this.state.todos.length } />
 
+          {/* Logo */}
+          <img src={logo} className="App-logo" alt="logo" />
+
+          {/* Container */}
           <div className="container">
-            <div className="row">
-              { todos }
+
+            <div className="row mb-5">
+
+              <div className="col-md-3 mt-4">
+                {/* Todo Form */}
+                <Todo_Form onAddTodo={ this.handleAddTodo }/>
+              </div>
+              <div className="col-md-9">
+                <div className="row">
+                  {/* Print Todos */}
+                  { todos }
+                </div>
+              </div>
+
             </div>
+
           </div>
 
-          <img src={logo} className="App-logo" alt="logo" />
       </div>
     );
   }

@@ -5,28 +5,28 @@
             "title": "Task 1",
             "responsible": "Mark",
             "description": "Lorem impsum 1",
-            "priority": "low"
+            "priority": "Low"
         },
 
         {
             "title": "Task 2",
             "responsible": "Ryan",
             "description": "Lorem impsum 2",
-            "priority": "medium"
+            "priority": "Medium"
         },
 
         {
             "title": "Task 3",
             "responsible": "Tomas",
             "description": "Lorem impsum 3",
-            "priority": "high"
+            "priority": "High"
         },
 
         {
             "title": "Task 4",
-            "responsible": "Linkon",
+            "responsible": "Lincoln",
             "description": "Lorem impsum 4",
-            "priority": "low"
+            "priority": "Low"
         }
     ]
 }

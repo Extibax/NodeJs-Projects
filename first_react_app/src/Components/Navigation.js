@@ -8,7 +8,7 @@ class Navigation extends Component
         super();
         this.state = {
           todos
-        }
+        };
       }
 
     render() {
@@ -17,7 +17,7 @@ class Navigation extends Component
                 <a className="navbar-brand" href="#">
                     { this.props.title }
                     <span className="badge badge-pill badge-dark ml-2">
-                        { this.state.todos.length }
+                        { this.props.length }
                     </span>
                 </a>
             </nav>
