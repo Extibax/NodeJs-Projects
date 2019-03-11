@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'first-angular-app';
+  users = ['Juan', 'Sebastian', 'Leon', 'John', 'Bruce'];
+  activated: boolean = true;
+  name: string = 'Ryan Ray';
 }
