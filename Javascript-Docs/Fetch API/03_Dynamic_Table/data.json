@@ -1,0 +1,28 @@
+[{
+        "ID": 1,
+        "Name": "Juan Bedoya",
+        "Email": "extibax@gmail.com",
+        "Status": true
+    },
+
+    {
+        "ID": 2,
+        "Name": "Debra",
+        "Email": "debra@gmail.com",
+        "Status": false
+    },
+
+    {
+        "ID": 3,
+        "Name": "Dex",
+        "Email": "dex@gmail.com",
+        "Status": true
+    },
+
+    {
+        "ID": 4,
+        "Name": "Rita",
+        "Email": "rita@gmail.com",
+        "Status": false
+    }
+]
