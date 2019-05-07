@@ -18,9 +18,7 @@ router.post('/', async (req, res) => {
         firstname: req.body.firstname,
         username: req.body.username,
         password: req.body.password,
-        email: req.body.email,
-        created_at: null,
-        updated_at: null
+        email: req.body.email
     };
     const result = await user_model.insertUser(new_user);
     console.log(result);
@@ -33,9 +31,7 @@ router.put('/:id', async (req, res) => {
         firstname: req.body.firstname,
         username: req.body.username,
         password: req.body.password,
-        email: req.body.email,
-        created_at: null,
-        updated_at: null
+        email: req.body.email
     };
 
     const result = await user_model.updateUser(update_user);

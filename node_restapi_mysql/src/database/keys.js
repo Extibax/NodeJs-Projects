@@ -3,10 +3,10 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const keys = {
-    host:           'localhost',
-    user:           'root',
-    password:       process.env.DB_PASS,
-    database:       'node_restapi_mysql'
+    host:           process.env.DB_HOST,
+    user:           process.env.DB_USER,
+    password:       process.env.PASS,
+    database:       process.env.DB_NAME
 }
 
 export default keys;
