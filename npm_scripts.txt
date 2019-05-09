@@ -1,0 +1,5 @@
+# View npm installed packages list
+npm list --depth 0 || npm list -g --depth 0
+
+# Run modern code without build with babel
+npx babel-node src/index.js
