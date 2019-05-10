@@ -30,9 +30,10 @@ router.post('/', async (req, res) => {
 });
 
 router.put('/:id', async (req, res) => {
+    const { id } = req.params;
     const { title, description } = req.body;
     const update_task = { title, description };
-    const result = await Task.findOneAndUpdate(req.params.id, update_task, {
+    const result = await Task.findByIdAndUpdate(id, update_task, {
         useFindAndModify: false
     });
     console.log(result);
@@ -42,7 +43,9 @@ router.put('/:id', async (req, res) => {
 });
 
 router.delete('/:id', async (req, res) => {
-    const result = await Task.findOneAndDelete(req.params.id);
+    const { id } = req.params;
+    console.log(id);
+    const result = await Task.findByIdAndDelete(id);
     console.log(result);
     res.json({
         status: true
