@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "",
+    "start": "node dist/index.js",
     "dev": "nodemon --exec babel-node src/index.js",
     "build": "babel src --out-dir dist"
   },
@@ -15,7 +15,8 @@
     "@babel/polyfill": "^7.4.4",
     "express": "^4.16.4",
     "express-graphql": "^0.8.0",
-    "graphql": "^14.3.0"
+    "graphql": "^14.3.0",
+    "graphql-tools": "^4.0.4"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
