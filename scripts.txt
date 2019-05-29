@@ -1,4 +1,0 @@
-git config --global credential.helper 'cache --timeout=86400'
-
-# Create bak file is good!
-cp example_file{,.bak}
